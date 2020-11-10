@@ -1,0 +1,72 @@
+{
+  "name": "@capacitor-community/admob-custom",
+  "version": "1.2.4",
+  "description": "A native plugin for AdMob",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "test": "sh ./android/gradlew test -p ./android test",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "docgen": "docgen --api AdMobPlugin --output-readme README_AUTO.md",
+    "release": "np",
+    "lint": "npm run prettier -- --check",
+    "fmt": "npm run prettier -- --write && npm run swiftlint -- autocorrect",
+    "prettier": "prettier \"{android/src,src}/**/*.{css,html,java,js,ts}\"",
+    "swiftlint": "node-swiftlint"
+  },
+  "author": "Masahiko Sakakibara <sakakibara@rdlabo.jp>",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/core": "^2.0.0"
+  },
+  "prettier": "@ionic/prettier-config",
+  "devDependencies": {
+    "@capacitor/android": "^2.0.0",
+    "@capacitor/docgen": "0.0.10",
+    "@capacitor/ios": "^2.0.0",
+    "@ionic/prettier-config": "^1.0.0",
+    "@ionic/swiftlint-config": "^1.0.2",
+    "husky": "^4.2.5",
+    "np": "^6.2.4",
+    "prettier": "^2.0.5",
+    "prettier-plugin-java": "^0.8.0",
+    "pretty-quick": "^2.0.1",
+    "rimraf": "^3.0.0",
+    "swiftlint": "^1.0.1",
+    "typescript": "^3.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "files": [
+    "dist/",
+    "ios/",
+    "android/",
+    "CapacitorCommunityAdmob.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EugeneRabochyi/admob.git"
+  },
+  "bugs": {
+    "url": "git@github.com:capacitor-community/admob.git/issues"
+  }
+}
