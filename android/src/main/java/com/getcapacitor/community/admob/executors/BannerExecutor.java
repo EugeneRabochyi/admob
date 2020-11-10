@@ -63,7 +63,7 @@ public class BannerExecutor extends Executor {
             // TODO: Make an enum like the AdSizeEnum?
             switch (adOptions.position) {
                 case "TOP_CENTER":
-                    mAdViewLayoutParams.gravity = Gravity.TOP;
+                    mAdViewLayoutParams.gravity = Gravity.BOTTOM;
                     break;
                 case "CENTER":
                     mAdViewLayoutParams.gravity = Gravity.CENTER;
