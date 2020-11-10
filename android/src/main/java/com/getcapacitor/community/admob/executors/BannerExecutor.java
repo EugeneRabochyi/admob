@@ -54,7 +54,7 @@ public class BannerExecutor extends Executor {
             mAdViewLayout = new RelativeLayout(contextSupplier.get());
             mAdViewLayout.setHorizontalGravity(Gravity.CENTER_HORIZONTAL);
             mAdViewLayout.setVerticalGravity(Gravity.BOTTOM);
-            mAdViewLayout.setMargins('20dp', '20dp', '20dp', '20dp');
+            mAdViewLayout.setMargins("20dp", "20dp", "20dp", "20dp");
 
             final CoordinatorLayout.LayoutParams mAdViewLayoutParams = new CoordinatorLayout.LayoutParams(
                 CoordinatorLayout.LayoutParams.WRAP_CONTENT,
