@@ -54,6 +54,7 @@ public class BannerExecutor extends Executor {
             mAdViewLayout = new RelativeLayout(contextSupplier.get());
             mAdViewLayout.setHorizontalGravity(Gravity.CENTER_HORIZONTAL);
             mAdViewLayout.setVerticalGravity(Gravity.BOTTOM);
+            mAdViewLayout.setMargins('20dp', '20dp', '20dp', '20dp');
 
             final CoordinatorLayout.LayoutParams mAdViewLayoutParams = new CoordinatorLayout.LayoutParams(
                 CoordinatorLayout.LayoutParams.WRAP_CONTENT,
@@ -63,7 +64,7 @@ public class BannerExecutor extends Executor {
             // TODO: Make an enum like the AdSizeEnum?
             switch (adOptions.position) {
                 case "TOP_CENTER":
-                    mAdViewLayoutParams.gravity = Gravity.BOTTOM;
+                    mAdViewLayoutParams.gravity = Gravity.TOP;
                     break;
                 case "CENTER":
                     mAdViewLayoutParams.gravity = Gravity.CENTER;
